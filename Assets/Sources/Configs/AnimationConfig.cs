@@ -1,18 +1,27 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationConfig : MonoBehaviour
+namespace Plarformer
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum AnimState
     {
-        
+        Idle = 0,
+        Run = 1,
+        Jump = 2
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    [CreateAssetMenu(fileName = "SpriteAnimatorCfg", menuName = "Configs / Animation", order = 1)]
+    public class AnimationConfig : ScriptableObject
     {
-        
+        [Serializable]
+        public class SpriteSequence
+        {
+            public AnimState Track;
+            public List<Sprite> Sprites = new List<Sprite>();
+        }
+
+        public List<SpriteSequence> Sequenses = new List<SpriteSequence>();
+
     }
 }
