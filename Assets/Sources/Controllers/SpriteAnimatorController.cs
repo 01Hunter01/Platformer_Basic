@@ -1,44 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Plarformer
 {
     public class SpriteAnimatorController : IDisposable
     {
-
-        private sealed class Animation
-        {
-            public AnimState Track;
-            public List<Sprite> Sprites;
-            public bool Loop;
-            public float Speed = 10f;
-            public float Counter = 0;
-            public bool Sleep;
-
-            public void Update()
-            {
-                if (Sleep) return;
-
-                Counter += Time.deltaTime * Speed;
-
-                if (Loop)
-                {
-                    while (Counter > Sprites.Count)
-                    {
-                        Counter -= Sprites.Count;
-                    }
-                }
-                else if (Counter > Sprites.Count)
-                {
-                    Counter = Sprites.Count;
-                    Sleep = true;
-                }
-            }
-        }
-
         private AnimationConfig _config;
         private Dictionary<SpriteRenderer, Animation> _activeAnimations = new Dictionary<SpriteRenderer, Animation>();
 
@@ -58,7 +25,7 @@ namespace Plarformer
                 if (animation.Track != track)
                 {
                     animation.Track = track;
-                    animation.Sprites = _config.Sequenses.Find(sequence => sequence.Track == track).Sprites;
+                    animation.Sprites = _config.sequenses.Find(sequence => sequence.track == track).sprites;
                     animation.Counter = 0;
                     
                 }
@@ -68,7 +35,7 @@ namespace Plarformer
                 _activeAnimations.Add(spriteRenderer, new Animation()
                 {
                     Track = track,
-                    Sprites = _config.Sequenses.Find(sequence => sequence.Track == track).Sprites,
+                    Sprites = _config.sequenses.Find(sequence => sequence.track == track).sprites,
                     Loop = loop,
                     Speed = speed,
                 });
@@ -83,17 +50,16 @@ namespace Plarformer
             }
         }
         
-        public void Update()
+        public void Execute()
         {
             foreach (var animation in _activeAnimations)
             {
-                animation.Value.Update();
+                animation.Value.Execute();
 
                 if (animation.Value.Counter < animation.Value.Sprites.Count)
                 {
                     animation.Key.sprite = animation.Value.Sprites[(int)animation.Value.Counter];
                 }
-                
             }
         }
 
