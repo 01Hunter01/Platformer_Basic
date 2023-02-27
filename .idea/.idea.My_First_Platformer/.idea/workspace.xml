@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/SpritePlayerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/SpritePlayerConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/CharacterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/CharacterView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/PlayerView.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +89,7 @@
       <updated>1677184390753</updated>
       <workItem from="1677184395375" duration="4654000" />
       <workItem from="1677409616387" duration="7972000" />
+      <workItem from="1677526954723" duration="4547000" />
     </task>
     <servers />
   </component>
