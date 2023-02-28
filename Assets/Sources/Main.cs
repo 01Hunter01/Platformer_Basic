@@ -4,25 +4,21 @@ using UnityEngine.Networking.PlayerConnection;
 
 namespace Plarformer
 {
-    public class Main : MonoBehaviour
+    public sealed class Main : MonoBehaviour
     {
         [SerializeField] private PlayerView playerView;
         [SerializeField] private CoinView coinView;
         [SerializeField] private Camera camera;
         [SerializeField] private SpriteRenderer background;
         
-        private AnimationConfig _coinConfig;
-        private SpriteAnimatorController _coinAnimator;
         private ParallaxController _parallaxController;
         private PlayerController _playerController;
+        private CoinController _coinController;
         
         private void Awake()
         {
             _playerController = new PlayerController(playerView);
-            
-            _coinConfig = Resources.Load<AnimationConfig>("SpriteCoinConfig");
-            _coinAnimator = new SpriteAnimatorController(_coinConfig);
-            _coinAnimator.StartAnimation(coinView.spriteRenderer, AnimState.Idle, true, 10.0f);
+            _coinController = new CoinController(coinView);
         }
 
         private void Start()
@@ -33,7 +29,7 @@ namespace Plarformer
         private void Update()
         {
             _playerController.Execute();
-            _coinAnimator.Execute();
+            _coinController.Execute();
             _parallaxController.Execute();
         }
     }
