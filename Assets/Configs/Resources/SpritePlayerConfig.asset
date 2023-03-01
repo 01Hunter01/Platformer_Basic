@@ -62,5 +62,4 @@ MonoBehaviour:
     - {fileID: 816101323, guid: 2b22e58cf7fbd7946b874f61d6cbbebc, type: 3}
   - track: 3
     sprites:
-    - {fileID: 397489114, guid: 5d2d7f4ab1e201048be99e1dc5fc3488, type: 3}
     - {fileID: -155811587, guid: 5d2d7f4ab1e201048be99e1dc5fc3488, type: 3}

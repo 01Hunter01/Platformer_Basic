@@ -1,31 +1,24 @@
 using System;
 using UnityEngine;
+using UnityEngine.Networking.PlayerConnection;
 
 namespace Plarformer
 {
-    public class Main : MonoBehaviour
+    public sealed class Main : MonoBehaviour
     {
-        [SerializeField] private CharacterView playerView;
+        [SerializeField] private PlayerView playerView;
         [SerializeField] private CoinView coinView;
         [SerializeField] private Camera camera;
         [SerializeField] private SpriteRenderer background;
         
-        private AnimationConfig _playerConfig;
-        private AnimationConfig _coinConfig;
-        private SpriteAnimatorController _playerAnimator;
-        private SpriteAnimatorController _coinAnimator;
         private ParallaxController _parallaxController;
-        
+        private PlayerController _playerController;
+        private CoinController _coinController;
         
         private void Awake()
         {
-            _playerConfig = Resources.Load<AnimationConfig>("SpritePlayerConfig");
-            _playerAnimator = new SpriteAnimatorController(_playerConfig);
-            _playerAnimator.StartAnimation(playerView.spriteRenderer, AnimState.IdleBlink, true, 7.0f);
-            
-            _coinConfig = Resources.Load<AnimationConfig>("SpriteCoinConfig");
-            _coinAnimator = new SpriteAnimatorController(_coinConfig);
-            _coinAnimator.StartAnimation(coinView.spriteRenderer, AnimState.Idle, true, 10.0f);
+            _playerController = new PlayerController(playerView);
+            _coinController = new CoinController(coinView);
         }
 
         private void Start()
@@ -35,8 +28,8 @@ namespace Plarformer
 
         private void Update()
         {
-            _playerAnimator.Execute();
-            _coinAnimator.Execute();
+            _playerController.Execute();
+            _coinController.Execute();
             _parallaxController.Execute();
         }
     }
