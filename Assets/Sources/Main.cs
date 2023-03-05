@@ -1,12 +1,10 @@
-using System;
 using UnityEngine;
-using UnityEngine.Networking.PlayerConnection;
 
 namespace Plarformer
 {
     public sealed class Main : MonoBehaviour
     {
-        [SerializeField] private PlayerView playerView;
+        [SerializeField] private LevelObjectView playerView;
         [SerializeField] private CoinView coinView;
         [SerializeField] private Camera camera;
         [SerializeField] private SpriteRenderer background;

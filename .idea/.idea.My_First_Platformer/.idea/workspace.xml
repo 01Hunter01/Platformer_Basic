@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/AnimState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/AnimState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/CoinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/CoinController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/LevelObjectView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/PlayerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/LevelObjectView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Background/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Background/Background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Tiles (2D)/Spring/GrassCliffRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Tiles (2D)/Spring/GrassCliffRight.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Tiles (2D)/Spring/GrassColumn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Tiles (2D)/Spring/GrassColumn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +98,7 @@
       <workItem from="1677409616387" duration="7972000" />
       <workItem from="1677526954723" duration="4547000" />
       <workItem from="1677616711294" duration="3585000" />
+      <workItem from="1678037901147" duration="422000" />
     </task>
     <servers />
   </component>

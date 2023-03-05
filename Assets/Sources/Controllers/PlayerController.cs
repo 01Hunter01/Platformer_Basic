@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Plarformer
@@ -8,7 +6,7 @@ namespace Plarformer
     {
         private AnimationConfig _playerConfig;
         private SpriteAnimatorController _playerAnimator;
-        private PlayerView _playerView;
+        private LevelObjectView _playerView;
         private Transform _playerTransform;
 
         private float _xAxisInput;
@@ -29,7 +27,7 @@ namespace Plarformer
         private bool _isJump;
         private bool _isMoving;
         
-        public PlayerController(PlayerView player)
+        public PlayerController(LevelObjectView player)
         {
             _playerView = player;
             _playerTransform = player.transform;
