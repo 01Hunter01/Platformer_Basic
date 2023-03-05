@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Plarformer
 {
@@ -6,7 +7,7 @@ namespace Plarformer
     {
         [SerializeField] private LevelObjectView playerView;
         [SerializeField] private CoinView coinView;
-        [SerializeField] private Camera camera;
+        [SerializeField] private Camera cam;
         [SerializeField] private SpriteRenderer background;
         
         private ParallaxController _parallaxController;
@@ -21,7 +22,7 @@ namespace Plarformer
 
         private void Start()
         {
-            _parallaxController = new ParallaxController(camera.transform, background.transform);
+            _parallaxController = new ParallaxController(cam.transform, background.transform);
         }
 
         private void Update()

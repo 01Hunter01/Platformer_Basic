@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Plarformer
 {
-    public class LevelObjectView : MonoBehaviour
+    public sealed class LevelObjectView : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer; 
-        public Transform transform;
-        public Collider2D collider;
-        public Rigidbody2D rigidbody;
+        public Transform trans;
+         public Collider2D coll;
+        public Rigidbody2D rigidBody;
     }
 }

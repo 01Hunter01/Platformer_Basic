@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Plarformer
 { 
-    public sealed class CoinController : MonoBehaviour
+    public sealed class CoinController
     {
         private AnimationConfig _coinConfig;
         private SpriteAnimatorController _coinAnimator;
