@@ -932,6 +932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerView: {fileID: 673543552}
   coinView: {fileID: 284849763}
+  cannonView: {fileID: 1615643122}
   cam: {fileID: 519420031}
   background: {fileID: 1757935390}
 --- !u!4 &635873886
