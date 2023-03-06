@@ -1,36 +1,40 @@
 using System;
 using UnityEngine;
-using UnityEngine.Networking.PlayerConnection;
+using UnityEngine.Serialization;
 
 namespace Plarformer
 {
     public sealed class Main : MonoBehaviour
     {
-        [SerializeField] private PlayerView playerView;
+        [SerializeField] private LevelObjectView playerView;
         [SerializeField] private CoinView coinView;
-        [SerializeField] private Camera camera;
+        [SerializeField] private CannonView cannonView;
+        [SerializeField] private Camera cam;
         [SerializeField] private SpriteRenderer background;
         
         private ParallaxController _parallaxController;
         private PlayerController _playerController;
         private CoinController _coinController;
+        private CannonController _cannonController;
         
         private void Awake()
         {
             _playerController = new PlayerController(playerView);
             _coinController = new CoinController(coinView);
-        }
-
-        private void Start()
-        {
-            _parallaxController = new ParallaxController(camera.transform, background.transform);
+            _parallaxController = new ParallaxController(cam.transform, background.transform);
+            _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
         }
 
         private void Update()
         {
-            _playerController.Execute();
             _coinController.Execute();
             _parallaxController.Execute();
+            _cannonController.Execute();
+        }
+
+        private void FixedUpdate()
+        {
+            _playerController.Execute();
         }
     }
 }
