@@ -16,7 +16,7 @@ namespace Plarformer
         private float _animationSpeed = 10.0f;
         private float _movingThreshold = 0.1f;
         private float _jumpForce = 6.0f;
-        private float _jumpThreshold = 1.0f;
+        private float _jumpThreshold = 1.5f;
         private float _yVelocity = 0;
         private float _xVelocity = 0;
         
@@ -48,15 +48,17 @@ namespace Plarformer
             _isJump = Input.GetAxis("Jump") > 0;
             _yVelocity = _playerRigidbody.velocity.y;
             _isMoving = Mathf.Abs(_xAxisInput) > _movingThreshold;
-            _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, _isMoving ? AnimState.Run : AnimState.Idle, true,
-                _animationSpeed);
             
             MoveTowards();
             Jump();
+            DoubleJump();
         }
 
         private void MoveTowards()
         { 
+            _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, _isMoving ? AnimState.Run : AnimState.Idle, true,
+                _animationSpeed);
+            
             if (_isMoving)
             {
                 _xVelocity = Time.fixedDeltaTime * _walkSpeed * (_xAxisInput < 0 ? _turnLeft : _turnRight);
@@ -75,6 +77,24 @@ namespace Plarformer
             if (_contactPooler.IsGrounded)
             {
                 if (_isJump && _yVelocity <= _jumpThreshold)
+                {
+                    _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                }
+            }
+            else
+            {
+                if (Mathf.Abs(_yVelocity) > _jumpThreshold)
+                {
+                    _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, AnimState.Jump, true, _animationSpeed);
+                }
+            }
+        }
+
+        private void DoubleJump()
+        {
+            if (_contactPooler.LeftContact || _contactPooler.RightContact)
+            {
+                if (_isJump && _yVelocity > _jumpThreshold)
                 {
                     _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
                 }
