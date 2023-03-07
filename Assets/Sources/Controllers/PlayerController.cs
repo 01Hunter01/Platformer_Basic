@@ -7,18 +7,19 @@ namespace Plarformer
         private AnimationConfig _playerConfig;
         private SpriteAnimatorController _playerAnimator;
         private ContactPooler _contactPooler;
-        private LevelObjectView _playerViewView;
+        private LevelObjectView _playerView;
         private Transform _playerTransform;
         private Rigidbody2D _playerRigidbody;
 
-        private float _xAxisInput;
+        private int _health = 100;
         private float _walkSpeed = 130f;
-        private float _animationSpeed = 10.0f;
+        private float _animationSpeed = 14.0f;
         private float _movingThreshold = 0.1f;
-        private float _jumpForce = 6.0f;
+        private float _jumpForce = 8.0f;
         private float _jumpThreshold = 1.5f;
         private float _yVelocity = 0;
         private float _xVelocity = 0;
+        private float _xAxisInput;
         
 
         private int _turnRight = 1;
@@ -29,18 +30,26 @@ namespace Plarformer
         private bool _isJump;
         private bool _isMoving;
         
-        public PlayerController(LevelObjectView playerView)
+        public PlayerController(InteractiveObjectView playerView)
         {
-            _playerViewView = playerView;
+            _playerView = playerView;
             _playerTransform = playerView.trans;
             _playerRigidbody = playerView.rigidBody;
             _playerConfig = Resources.Load<AnimationConfig>("SpritePlayerConfig");
             _playerAnimator = new SpriteAnimatorController(_playerConfig);
             _contactPooler = new ContactPooler(playerView.coll);
+
+            playerView.TakeDamage += TakeDamageFromBullet;
         }
         
         public void Execute()
         {
+            if (_health <= 0)
+            {
+                _health = 0;
+                _playerView.spriteRenderer.enabled = false;
+            }
+            
             _playerAnimator.Execute();
             _contactPooler.Excute();
             
@@ -51,12 +60,11 @@ namespace Plarformer
             
             MoveTowards();
             Jump();
-            DoubleJump();
         }
 
         private void MoveTowards()
         { 
-            _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, _isMoving ? AnimState.Run : AnimState.Idle, true,
+            _playerAnimator.StartAnimation(_playerView.spriteRenderer, _isMoving ? AnimState.Run : AnimState.Idle, true,
                 _animationSpeed);
             
             if (_isMoving)
@@ -85,27 +93,14 @@ namespace Plarformer
             {
                 if (Mathf.Abs(_yVelocity) > _jumpThreshold)
                 {
-                    _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, AnimState.Jump, true, _animationSpeed);
+                    _playerAnimator.StartAnimation(_playerView.spriteRenderer, AnimState.Jump, true, _animationSpeed);
                 }
             }
         }
 
-        private void DoubleJump()
+        private void TakeDamageFromBullet(BulletView bullet)
         {
-            if (_contactPooler.LeftContact || _contactPooler.RightContact)
-            {
-                if (_isJump && _yVelocity > _jumpThreshold)
-                {
-                    _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-                }
-            }
-            else
-            {
-                if (Mathf.Abs(_yVelocity) > _jumpThreshold)
-                {
-                    _playerAnimator.StartAnimation(_playerViewView.spriteRenderer, AnimState.Jump, true, _animationSpeed);
-                }
-            }
+            _health -= bullet.DamagePoint;
         }
     }
 }

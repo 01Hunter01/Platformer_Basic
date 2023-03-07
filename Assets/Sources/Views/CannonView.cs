@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Plarformer
 {
-    public class CannonView : MonoBehaviour
+    public sealed class CannonView : MonoBehaviour
     {
         public Transform muzzleT;
         public Transform emitterT;
-        public List<LevelObjectView> bullets;
+        public List<BulletView> bullets;
     }
 }

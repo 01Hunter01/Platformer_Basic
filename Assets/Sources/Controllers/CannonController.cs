@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Plarformer
 {
-    public class CannonController
+    public sealed class CannonController
     {
         private Transform _muzzleT;
         private Transform _targetT;
