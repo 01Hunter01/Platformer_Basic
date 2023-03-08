@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Plarformer
 {
@@ -9,20 +8,23 @@ namespace Plarformer
         [SerializeField] private InteractiveObjectView playerView;
         [SerializeField] private CoinView coinView;
         [SerializeField] private CannonView cannonView;
-        [SerializeField] private Camera cam;
+        [SerializeField] private Camera mainCamera;
         [SerializeField] private SpriteRenderer background;
         
         private ParallaxController _parallaxController;
+        private CameraController _cameraController;
         private PlayerController _playerController;
         private CoinController _coinController;
         private CannonController _cannonController;
         private EmitterController _emitterController;
         
+        
         private void Awake()
         {
             _playerController = new PlayerController(playerView);
             _coinController = new CoinController(coinView);
-            _parallaxController = new ParallaxController(cam.transform, background.transform);
+            _parallaxController = new ParallaxController(mainCamera.transform, background.transform);
+            _cameraController = new CameraController(mainCamera.transform, playerView.transform);
             _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
             _emitterController = new EmitterController(cannonView.bullets, cannonView.emitterT);
         }
@@ -30,7 +32,6 @@ namespace Plarformer
         private void Update()
         {
             _coinController.Execute();
-            _parallaxController.Execute();
             _cannonController.Execute();
             _emitterController.Execute();
         }
@@ -38,6 +39,12 @@ namespace Plarformer
         private void FixedUpdate()
         {
             _playerController.Execute();
+        }
+
+        private void LateUpdate()
+        {
+            _parallaxController.Execute();
+            _cameraController.Execute();
         }
     }
 }

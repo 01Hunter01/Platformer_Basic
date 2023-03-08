@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/BulletController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/CannonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/CannonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/EmitterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/EmitterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/ParallaxController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/ParallaxController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/CannonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/CannonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/LevelObjectView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/InterLevelObjectView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/LevelObjectView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/InterLevelObjectView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Background/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Background/Background.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +100,8 @@
       <workItem from="1678041849485" duration="5896000" />
       <workItem from="1678086585912" duration="4734000" />
       <workItem from="1678176575814" duration="4626000" />
-      <workItem from="1678197930682" duration="4054000" />
+      <workItem from="1678197930682" duration="4646000" />
+      <workItem from="1678304196653" duration="4972000" />
     </task>
     <servers />
   </component>
