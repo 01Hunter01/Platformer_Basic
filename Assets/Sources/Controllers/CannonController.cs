@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Plarformer
 {
-    public class CannonController
+    public sealed class CannonController
     {
         private Transform _muzzleT;
         private Transform _targetT;

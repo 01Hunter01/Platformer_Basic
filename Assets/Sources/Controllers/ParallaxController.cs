@@ -9,7 +9,7 @@ namespace Plarformer
         private Vector3 _cameraStartPosition;
         private Vector3 _backStartPosition;
 
-        private const float Coef = 1.0f;
+        private const float Coef = 0.1f;
         
         public ParallaxController(Transform camera, Transform background)
         {
@@ -21,7 +21,7 @@ namespace Plarformer
 
         public void Execute()
         {
-            _background.position = _backStartPosition + (_camera.position - _cameraStartPosition) * Coef;
+            _background.position = _backStartPosition + (_camera.position - _cameraStartPosition);
         }
     }
 }

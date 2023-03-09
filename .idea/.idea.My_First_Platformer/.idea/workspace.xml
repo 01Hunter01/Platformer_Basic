@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="" />
+    <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/InterLevelObjectView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/InterLevelObjectView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Enemies/Mace&amp;Saw&amp;Spike/Spike_Left&amp;down.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Enemies/Mace&amp;Saw&amp;Spike/Spike_Left&amp;down.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Enemies/Square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Enemies/Square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,8 +19,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Sources/Controllers/CoinController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Managers/WaterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sources/Utils/ContactPooler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sources/Views/CoinView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Views/InteractiveObjectView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,6 +101,10 @@
       <workItem from="1678037901147" duration="2212000" />
       <workItem from="1678041849485" duration="5896000" />
       <workItem from="1678086585912" duration="4734000" />
+      <workItem from="1678176575814" duration="4626000" />
+      <workItem from="1678197930682" duration="4646000" />
+      <workItem from="1678304196653" duration="5566000" />
+      <workItem from="1678351481916" duration="3951000" />
     </task>
     <servers />
   </component>
