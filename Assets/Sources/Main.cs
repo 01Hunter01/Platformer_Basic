@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Plarformer
@@ -10,14 +10,16 @@ namespace Plarformer
         [SerializeField] private CannonView cannonView;
         [SerializeField] private Camera mainCamera;
         [SerializeField] private SpriteRenderer background;
-        
+        [SerializeField] private List<LevelObjectView> waterViews;
+
         private ParallaxController _parallaxController;
         private CameraController _cameraController;
         private PlayerController _playerController;
         private CoinController _coinController;
         private CannonController _cannonController;
         private EmitterController _emitterController;
-        
+
+        private WaterManager _waterManager;
         
         private void Awake()
         {
@@ -27,6 +29,8 @@ namespace Plarformer
             _cameraController = new CameraController(mainCamera.transform, playerView.transform);
             _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
             _emitterController = new EmitterController(cannonView.bullets, cannonView.emitterT);
+
+            _waterManager = new WaterManager(waterViews);
         }
 
         private void Update()
@@ -34,6 +38,7 @@ namespace Plarformer
             _coinController.Execute();
             _cannonController.Execute();
             _emitterController.Execute();
+            _waterManager.Execute();
         }
 
         private void FixedUpdate()
