@@ -11,6 +11,7 @@ namespace Plarformer
         [SerializeField] private Camera mainCamera;
         [SerializeField] private SpriteRenderer background;
         [SerializeField] private List<LevelObjectView> waterViews;
+        [SerializeField] private LevelObjectView enemyView;
 
         private ParallaxController _parallaxController;
         private CameraController _cameraController;
@@ -18,6 +19,7 @@ namespace Plarformer
         private CoinController _coinController;
         private CannonController _cannonController;
         private EmitterController _emitterController;
+        private EnemyController _enemyController;
 
         private WaterManager _waterManager;
         
@@ -29,7 +31,8 @@ namespace Plarformer
             _cameraController = new CameraController(mainCamera.transform, playerView.transform);
             _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
             _emitterController = new EmitterController(cannonView.bullets, cannonView.emitterT);
-
+            _enemyController = new EnemyController(enemyView);
+            
             _waterManager = new WaterManager(waterViews);
         }
 
@@ -44,6 +47,7 @@ namespace Plarformer
         private void FixedUpdate()
         {
             _playerController.Execute();
+            _enemyController.Execute();
         }
 
         private void LateUpdate()
