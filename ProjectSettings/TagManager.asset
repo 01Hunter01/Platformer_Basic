@@ -11,8 +11,8 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Platform
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Obstacle
     uniqueID: 3427053881
+    locked: 0
+  - name: Enemies
+    uniqueID: 3775995837
     locked: 0
