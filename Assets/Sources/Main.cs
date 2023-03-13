@@ -31,7 +31,7 @@ namespace Plarformer
             _cameraController = new CameraController(mainCamera.transform, playerView.transform);
             _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
             _emitterController = new EmitterController(cannonView.bullets, cannonView.emitterT);
-            _enemyController = new EnemyController(enemyView);
+            _enemyController = new EnemyController(enemyView, playerView);
             
             _waterManager = new WaterManager(waterViews);
         }

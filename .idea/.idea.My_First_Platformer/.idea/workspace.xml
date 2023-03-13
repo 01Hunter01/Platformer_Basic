@@ -4,10 +4,9 @@
     <list default="true" id="f28ae8f4-4e28-4e40-a447-2d9ce47113e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My_First_Platformer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Controllers/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Controllers/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Enemies/2D Mace View.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Enemies/2D Mace View.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <workItem from="1678197930682" duration="4646000" />
       <workItem from="1678304196653" duration="5566000" />
       <workItem from="1678351481916" duration="3951000" />
-      <workItem from="1678633552871" duration="13019000" />
+      <workItem from="1678633552871" duration="16629000" />
     </task>
     <servers />
   </component>
