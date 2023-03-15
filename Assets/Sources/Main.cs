@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Plarformer
 {
@@ -12,6 +13,7 @@ namespace Plarformer
         [SerializeField] private SpriteRenderer background;
         [SerializeField] private List<LevelObjectView> waterViews;
         [SerializeField] private LevelObjectView enemyView;
+        [SerializeField] private GeneratorLevelView generatorLevelView;
 
         private ParallaxController _parallaxController;
         private CameraController _cameraController;
@@ -20,7 +22,7 @@ namespace Plarformer
         private CannonController _cannonController;
         private EmitterController _emitterController;
         private EnemyController _enemyController;
-
+        private GeneratorLevelController _generatorLevelController;
         private WaterManager _waterManager;
         
         private void Awake()
@@ -32,8 +34,11 @@ namespace Plarformer
             _cannonController = new CannonController(cannonView.muzzleT, playerView.trans);
             _emitterController = new EmitterController(cannonView.bullets, cannonView.emitterT);
             _enemyController = new EnemyController(enemyView, playerView);
+            _generatorLevelController = new GeneratorLevelController(generatorLevelView);
             
             _waterManager = new WaterManager(waterViews);
+            
+            _generatorLevelController.Implement();
         }
 
         private void Update()
