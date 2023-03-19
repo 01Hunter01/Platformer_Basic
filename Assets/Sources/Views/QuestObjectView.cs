@@ -6,6 +6,7 @@ namespace Platformer
     {
         public Color _completedColor;
         public Color _defaultColor;
+        public int id;
 
         private void Awake()
         {

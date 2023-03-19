@@ -2,7 +2,7 @@ using System;
 
 namespace Platformer
 {
-    public interface IQuestStoryModel : IDisposable
+    public interface IQuestStory : IDisposable
     {
         bool IsDone { get; }
     }

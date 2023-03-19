@@ -15,14 +15,14 @@ namespace Platformer
         public QuestController(InteractiveObjectView player, IQuestModel model, QuestObjectView questObjectView)
         {
             _player = player;
-            _model = model;
             _active = false;
+            _model = model;
             _questView = questObjectView;
         }
 
         private void OnContact(QuestObjectView questItem)
         {
-            if (questItem == null)
+            if (questItem != null)
             {
                 if (_model.TryComplete(questItem.gameObject))
                 {
