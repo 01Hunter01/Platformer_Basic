@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Plarformer
+namespace Platformer
 {
     public sealed class Main : MonoBehaviour
     {
@@ -14,6 +14,7 @@ namespace Plarformer
         [SerializeField] private List<LevelObjectView> waterViews;
         [SerializeField] private LevelObjectView enemyView;
         [SerializeField] private GeneratorLevelView generatorLevelView;
+        [SerializeField] private List<QuestObjectView> coinViews;
 
         private ParallaxController _parallaxController;
         private CameraController _cameraController;
@@ -24,6 +25,7 @@ namespace Plarformer
         private EnemyController _enemyController;
         private GeneratorLevelController _generatorLevelController;
         private WaterManager _waterManager;
+        private CoinManager _coinManager;
         
         private void Awake()
         {
@@ -37,6 +39,7 @@ namespace Plarformer
             _generatorLevelController = new GeneratorLevelController(generatorLevelView);
             
             _waterManager = new WaterManager(waterViews);
+            _coinManager = new CoinManager(coinViews);
             
             _generatorLevelController.Implement();
         }
@@ -47,6 +50,7 @@ namespace Plarformer
             _cannonController.Execute();
             _emitterController.Execute();
             _waterManager.Execute();
+            _coinManager.Execute();
         }
 
         private void FixedUpdate()

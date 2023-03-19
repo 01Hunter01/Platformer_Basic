@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
     [CreateAssetMenu(fileName = "QuestConfig", menuName = "Configs / QuestSystem / QuestConfig", order = 1)]
     public sealed class QuestConfig : ScriptableObject

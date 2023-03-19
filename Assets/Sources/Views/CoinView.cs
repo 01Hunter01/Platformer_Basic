@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
     public class CoinView : MonoBehaviour
     {

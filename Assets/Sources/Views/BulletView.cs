@@ -1,4 +1,4 @@
-namespace Plarformer
+namespace Platformer
 {
     public sealed class BulletView : LevelObjectView
     {

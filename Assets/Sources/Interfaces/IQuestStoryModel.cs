@@ -1,6 +1,6 @@
 using System;
 
-namespace Plarformer
+namespace Platformer
 {
     public interface IQuestStoryModel : IDisposable
     {

@@ -1,11 +1,11 @@
 using System;
 
-namespace Plarformer
+namespace Platformer
 {
     public interface IQuest : IDisposable
     {
         event EventHandler<IQuest> QuestCompleted;
-        bool IsComleted { get; }
+        bool IsCompleted { get; }
         void Reset();
     }
 }

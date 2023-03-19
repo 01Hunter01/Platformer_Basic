@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
     [CreateAssetMenu(fileName = "QuestItemConfig", menuName = "Configs / QuestSystem / QuestItemConfig", order = 1)]
     public sealed class QuestItemConfig : ScriptableObject

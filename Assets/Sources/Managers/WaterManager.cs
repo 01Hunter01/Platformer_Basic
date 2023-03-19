@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
     public sealed class WaterManager
     {

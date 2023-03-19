@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyNamespace
+namespace Platformer
 {
     public interface IQuestModel
     {
