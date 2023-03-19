@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Plarformer
 {
-    public class WaterManager
+    public sealed class WaterManager
     {
         private float _animationSpeed = 8f;
 

@@ -8,11 +8,11 @@ namespace Plarformer
         private ContactPoint2D[] _contacts = new ContactPoint2D[5];
         private int _contactCount = 0;
         private float _threshold = 0.2f;
-        
+
         public bool IsGrounded { get; private set; }
         public bool LeftContact { get; private set; }
         public bool RightContact { get; private set; }
-        
+
         public ContactPooler(Collider2D collider)
         {
             _collider = collider;
@@ -35,4 +35,3 @@ namespace Plarformer
         }
     }
 }
-
