@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
     [Serializable]
     public class SpriteSequence

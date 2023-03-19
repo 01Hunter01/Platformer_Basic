@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plarformer
+namespace Platformer
 {
-    public class WaterManager
+    public sealed class WaterManager
     {
         private float _animationSpeed = 8f;
 

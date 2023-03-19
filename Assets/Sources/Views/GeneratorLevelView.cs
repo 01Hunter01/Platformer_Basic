@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Plarformer
+namespace Platformer
 {
     public class GeneratorLevelView : MonoBehaviour
     {
